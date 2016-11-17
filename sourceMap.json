@@ -1,4 +1,6 @@
 {
   "zepto": "zepto/zepto.min.js",
+  "jquery":"jquery/dist/jquery.js",
+  "director":"director/build/director.min.js",
   "then":"thenjs/then.js"
 }

@@ -1,15 +1,22 @@
 var Router = require("director").Router;
 var ajax = require("./until/ajax");
-var index_Action=require('./viewAction/index');
+var Thenjs = require('../../lib/thenjs/then');
+var index_Action = require('./viewAction/index');
+var base_Action = require('./viewAction/base');
 //渲染目标页面
-var layout=$('#layout');
-debugger;
+var main=$('.currentPage');
+var loading=$('.loadBlock');
 var requestPage = function(data,complete,param){
-    layout.append($(data));
+    var targetPage = $(data);
+    main.html(targetPage);
     //无请求页面使用
     if(!complete){
-       
-        nextPage();
+        setTimeout(function(){
+            loading.hide();
+        },350);
+        setTimeout(function(){
+            nextPage();
+        },350);
         return;
     }
     Thenjs(function (cont) {
@@ -17,16 +24,26 @@ var requestPage = function(data,complete,param){
         complete && complete(cont,param);
     }).then(function (cont) {
         //渲染完毕，跳转到目标页
-        nextPage();
+        setTimeout(function(){
+            loading.hide();
+        },350);
+        setTimeout(function(){
+            nextPage();
+        },350);
     }).fail(function (cont, error) { // 通常应该在链的最后放置一个 `fail` 方法收集异常
-        layout.html('<div class="page targetPage slideIn">' +
-        '<div style="height: '+viewHight+'px" class="_scrollBox"><span class="errorreq">'+error+'</span></div></div>');
-        nextPage();
+        main.html(error);
+        setTimeout(function(){
+            loading.hide();
+        },350);
+        setTimeout(function(){
+            nextPage();
+        },350);
     });
 };
 //请求目标页面
 var hashchange = function (url, complete,param) {
-    ajax._get({
+	loading.show();
+    $.ajax({
         url: url,
         success: function (data) {
             requestPage(data,complete,param);
@@ -45,12 +62,16 @@ var hashchange = function (url, complete,param) {
 };
 //切换到目标页的动画
 var nextPage = function(){
-    
+    main.css({"right":"0"})
 };
 var routes = {
     '/index': function () {
-        document.title="闪电分期";
-        hashchange('view/index.html',index_Action);
+        document.title="首页";
+        hashchange('./view/index.html',index_Action);
+    },
+    '/base': function () {
+        document.title="基本功能展示";
+        hashchange('./view/base.html',base_Action);
     }
 };
 
