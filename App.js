@@ -30,6 +30,7 @@ app.get(/^(\/\w+)*\/(\w+)\.(png|gif|jpg)(\?\S*)?$/, function(req, res) {
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'src/index.html'));
 });
+
 app.listen(3000, function(err) {
   if (err) {
     console.log(err);
