@@ -1,0 +1,50 @@
+{
+  "name": "thenjs",
+  "main": "then.js",
+  "typings": "./thenjs.d.ts",
+  "version": "2.0.2",
+  "description": "The fastest, smallest, fully compatible, full-featured asynchronous module!",
+  "authors": [
+    "Yan Qing <admin@zensh.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/teambition/then.js"
+  },
+  "homepage": "https://github.com/teambition/then.js",
+  "keywords": [
+    "promise",
+    "then",
+    "async",
+    "then.js",
+    "thenjs"
+  ],
+  "tags": [
+    "promise",
+    "then",
+    "async",
+    "then.js",
+    "thenjs"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.2.0",
+    "jsbench": ">=0.5.x",
+    "async": ">=1.5.0",
+    "bluebird": ">=3.1.1",
+    "co": ">=4.6.0",
+    "rsvp": ">=3.1.0",
+    "when": ">=3.7.5",
+    "thunks": ">=4.1.1",
+    "standard": "^5.4.1"
+  },
+  "scripts": {
+    "test": "standard && gulp test"
+  },
+  "files": [
+    "README.md",
+    "then.js",
+    "thenjs.d.ts"
+  ]
+}

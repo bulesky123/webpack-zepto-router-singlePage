@@ -1,0 +1,221 @@
+a,img,button,input,textarea{ -webkit-tap-highlight-color:rgba(255,255,255,0);}
+*{ margin:0; padding:0;}
+li{ list-style:none;}
+img{ border:none;}
+i{font-style:normal}
+s{text-decoration: none}
+a{ text-decoration:none; -webkit-appearance:none;}
+.cl{ zoom:1;}
+.cl:after{ content:""; display:block; clear:both;}
+body{ font-family: Microsoft Yahei,Avenir,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif; }
+#content{position: relative;}
+div.hiddenAll {
+     overflow: hidden;
+     width: 0;
+     height: 0;
+     border: none;
+}
+input,textarea,button{ /*font-family: Microsoft Yahei;*/ resize:none; -webkit-appearance:none; outline:medium;}
+input{ border: none; background: none; width:100%;font-family: Microsoft Yahei,Avenir,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;}
+h1,h2,h3,h4,strong{ font-weight:bold;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{ color: #cecece;}
+input:-moz-placeholder, textarea:-moz-placeholder{ color: #cecece;}
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none;}
+
+/*float*/
+.left{ float:left;}
+.right{ float:right;}
+.hide{ display: none !important;}
+.show{ display: block;}
+.none{display: none;}
+/*font-size*/
+.font12{ font-size:12px}
+.font13{ font-size:13px}
+.font14{ font-size:14px}
+.font14Im{font-size: 14px !important;}
+.font15{ font-size:15px}
+.font16{ font-size:16px}
+.font24{ font-size:24px;}
+.font30{ font-size:30px}
+
+/*loanding动画*/
+.loadBg{
+    background: url('../../img/loading/loadCartoon.png') 0 -80px no-repeat;
+    width: 90px;
+    height: 50px;
+    margin: 11px auto 0;
+    background-size: cover;
+    animation: loadBg 1s infinite linear;
+    -webkit-animation: loadBg 1s infinite linear;
+    position: relative;
+    z-index: 2;
+}
+.loadCartoon{ position:absolute; top:0; left:0.6rem; animation:loadCartoon 1s linear infinite alternate;-webkit-animation:loadCartoon 1s linear infinite alternate; z-index: 6;}
+.loadHead{
+    background: url('../../img/loading/loadCartoon.png') no-repeat;
+    width: 90px;
+    height: 34px;
+    position: absolute;
+    left: 19px;
+    top: 4px;
+    z-index: 9;
+    background-size: cover;
+}
+.loadBody{
+    background: url('../../img/loading/loadCartoon.png') 0 -34px no-repeat;
+    width: 90px;
+    height: 15px;
+    position: absolute;
+    left: 19px;
+    top: 32.4px;
+    z-index: 7;
+    background-size: cover;
+}
+.loadDun{
+    background: url('../../img/loading/loadCartoon.png') 0 -49px no-repeat;
+    width: 90px;
+    height: 18px;
+    position: absolute;
+    left: 36.4px;
+    top: 34px;
+    z-index: 10;
+    background-size: cover;
+}
+.loadCappa{
+    background: url('../../img/loading/loadCartoon.png') 0 -67px no-repeat;
+    width: 90px;
+    height: 11px;
+    position: absolute;
+    left: 46px;
+    top: 28px;
+    z-index: 8;
+    background-size: cover;
+    animation: loadCappa 1s ease-in-out 0s infinite;
+    -webkit-animation: loadCappa 1s ease-in-out 0s infinite;
+    transform-origin: 0px 5px 20px;
+    -webkit-transform-origin: 0px 5px 20px;
+}
+.loadCon{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 4;
+}
+.backcolor{ position: absolute; top:0; left:0; width:100%; height:100%; background: #333; opacity:0.8; filter:alpha(opacity=80); border-radius:5%; -webkit-border-radius:5%;}
+.backcolornone{opacity: 0}
+.loadBlock {
+    width: 104px;
+    height: 84px;
+    position: fixed;
+    top: 36%;
+    left: 50%;
+    margin-left: -52px;
+    text-align: center;
+    z-index: 999;
+    overflow: hidden;
+}
+.loadBlockPart{
+    width: 104px;
+    height: 84px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin: 110px auto;
+    top:0;
+    left:0;
+}
+.loadPart{
+    width: 160px;
+    height: 112px;
+}
+.loadPart .loadBg{
+    background: url('../../img/loading/loadCartoon_index.png') 0 -122px no-repeat;
+    background-size: cover;
+    width: 102.5px;
+    height: 79px;
+    margin: 14px auto 0;
+}
+.loadPart .loadHead {
+    background: url('../../img/loading/loadCartoon_index.png') no-repeat;
+    background-size: cover;
+    width: 102.5px;
+    height: 52.5px;
+    top: 10px;
+    left: 19px;
+}
+.loadPart .loadCartoon{
+    left: 28px;
+}
+.loadPart .loadBody {
+    background: url('../../img/loading/loadCartoon_index.png') 0 -52.5px no-repeat;
+    background-size: cover;
+    width: 102.5px;
+    height: 24px;
+    left: 19px;
+    top: 53.6px;
+}
+.loadPart .loadDun {
+    background: url('../../img/loading/loadCartoon_index.png') 0 -76.5px no-repeat;
+    background-size: cover;
+    width: 102.5px;
+    height: 27.5px;
+    left: 50px;
+    top: 54px;
+}
+.loadPart .loadCappa {
+    background: url('../../img/loading/loadCartoon_index.png') 0 -104px no-repeat;
+    background-size: cover;
+    width: 102.5px;
+    height: 17px;
+    left: 60px;
+    top: 44px;
+}
+
+@keyframes loadBg {0%{ left:-5.2rem;} 99.99%{ left:5.2rem;} 100%{ left:-5.2rem;} }
+@-webkit-keyframes loadBg {0%{ left:-5.2rem;} 99.99%{ left:5.2rem;} 100%{ left:-5.2rem;} }
+@keyframes loadCartoon {0%{ top:0.4rem;} 50%{ top:0rem;} 100%{ top:0.4rem;} }
+@-webkit-keyframes loadCartoon {0%{ top:0.4rem;}50%{ top:0rem;}100%{ top:0.4rem;} }
+@keyframes loadCappa {0%{ transform:rotate(0deg); -webkit-transform:rotate(0deg);}50%{ transform:rotate(18deg); -webkit-transform:rotate(18deg);} 100%{ transform:rotate(0deg); -webkit-transform:rotate(0deg);} }
+@-webkit-keyframes loadCappa {0%{ transform:rotate(0deg); -webkit-transform:rotate(0deg);} 50%{ transform:rotate(18deg); -webkit-transform:rotate(18deg);} 100%{ transform:rotate(0deg); -webkit-transform:rotate(0deg);} }
+
+/*footer*/
+.footer{
+    width: 100%; height: 49px; position: fixed; left: 0; bottom: 0;
+    z-index: 99; background: #f3f3f3;
+    opacity: .97;
+    border-top:1px solid #d4d4d4;
+    filter:alpha(opacity=97);
+}
+.ftBlank{
+    width:100%;height:65px;
+}
+.footerList{ height: 49px; position: relative;}
+.footerList li{ float: left; width:42%; height:40px; text-align: center; padding-top:7px; position: relative;}
+.footerList li.center-img {
+    width:16%;
+}
+.footer_icon{
+    background: url("../../img/footer/footer_new.png") no-repeat;
+    width:22px;
+    height:20px;
+    background-size: 22px auto;
+    background-position: 0 -64px;
+    margin:auto;
+}
+.bill_icon{ background-position: 0 -20px;}
+.profit_icon{ background-position: 0 -40px;}
+.my_icon{ background-position: 0 -21px;}
+.post .footer_icon{ background-position: 0 -43px;}
+.post .bill_icon{ background-position: -22px -20px;}
+.post .profit_icon{ background-position: -22px -40px;}
+.post .my_icon{ background-position: 0 0;}
+.post p{ color:#4c6ed2;}
+.footerJie_icon{ width:52px; height:52px; position: absolute; top:-8px; left:50%; margin-left: -26px;}
+.footerJie_icon img{ width:52px; height:52px;}
+.footerList p{ line-height: 22px;}
+.ftBorder{ position: absolute; left:0; bottom:49px;width:100%;}
+.ftBorder img{ width:100%; height:auto; background-size: contain; display: block;}
+#shade{position: fixed;  left: 0;top: 0;width: 100%;bottom:0;background: rgba(0,0,0,0);z-index:111;}

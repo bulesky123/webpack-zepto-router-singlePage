@@ -1,0 +1,36 @@
+{
+  "name": "thenjs",
+  "main": "then.js",
+  "version": "2.0.2",
+  "description": "The fastest, smallest, fully compatible, full-featured asynchronous module!",
+  "homepage": "https://github.com/teambition/then.js",
+  "authors": [
+    "Yan Qing <admin@zensh.com>"
+  ],
+  "keywords": [
+    "promise",
+    "then",
+    "async",
+    "then.js",
+    "thenjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "benchmark",
+    "test",
+    "examples",
+    "Gruntfile.js"
+  ],
+  "_release": "2.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.2",
+    "commit": "64ff8efa1fbc8745f0171c309c4d0beafb4828ce"
+  },
+  "_source": "git://github.com/teambition/then.js.git",
+  "_target": "~2.0.2",
+  "_originalSource": "thenjs",
+  "_direct": true
+}
