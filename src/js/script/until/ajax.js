@@ -6,8 +6,8 @@
             async: true,
             contentType:params.contentType || 'application/json;charset=UTF-8;',
             data: JSON.stringify(params.data),
-            success:params.success(data) || function(){},
-            error:params.error(data) || function(){},
+            success:params.success || function(){},
+            error:params.error || function(){},
             complete: params.complete || function() {}
         })
     };

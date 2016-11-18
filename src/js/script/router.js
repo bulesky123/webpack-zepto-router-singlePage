@@ -1,6 +1,6 @@
 var Router = require("director").Router;
 var ajax = require("./until/ajax");
-var Thenjs = require('../../lib/thenjs/then');
+var Thenjs = require('then');
 var index_Action = require('./viewAction/index');
 var base_Action = require('./viewAction/base');
 //渲染目标页面
@@ -43,7 +43,7 @@ var requestPage = function(data,complete,param){
 //请求目标页面
 var hashchange = function (url, complete,param) {
 	loading.show();
-    $.ajax({
+    ajax._get({
         url: url,
         success: function (data) {
             requestPage(data,complete,param);
@@ -72,6 +72,26 @@ var routes = {
     '/base': function () {
         document.title="基本功能展示";
         hashchange('./view/base.html',base_Action);
+    },
+    '/data': function () {
+        document.title="数据接入";
+        hashchange('./view/data.html');
+    },
+    '/formSubmit': function () {
+        document.title="表单提交";
+        hashchange('./view/formSubmit.html');
+    },
+    '/clickEvent': function () {
+        document.title="点击事件";
+        hashchange('./view/clickEvent.html');
+    },
+    '/delBook': function () {
+        document.title="删除书籍";
+        hashchange('./view/delBook.html');
+    },
+    '/nextDo': function () {
+        document.title="接下来";
+        hashchange('./view/nextDo.html');
     }
 };
 

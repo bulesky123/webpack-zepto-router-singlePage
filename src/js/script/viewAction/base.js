@@ -2,9 +2,8 @@
  * Created by zhoufei on 2016/11/13.
  */
 (function(){
-    var React=require('react');
     module.exports=function(callback){
-        var data = [
+        /*var data = [
             {
                 "id": 0,
                 "name":"东野圭吾天王套装（套装共4册）",
@@ -50,7 +49,7 @@
                     <div className="bookImg">
                     <img src={"img/"+this.props.url} />
                     </div>
-                );
+                )
             }
         });
         //书籍介绍数据
@@ -63,7 +62,7 @@
                 <label>价格：</label><span>{"￥"+this.props.data.price}</span>
                 <button>点击购买</button>
                 </div>
-                );
+                )
             }
         });
         //推荐或介绍
@@ -78,8 +77,8 @@
                                 <p>{rec.text}</p>
                             <span>{"----"+rec.auth}</span>
                             </div>
-                            );
-                        });
+                            )
+                        })
                 }else{
                     regData = <p>{this.props.data.text}</p>
                 }
@@ -99,7 +98,7 @@
                 <BookData data={this.props.data}/>
                 <BookRec data={this.props.data}/>
                 </div>
-                );
+                )
             }
         });
         //列表
@@ -109,13 +108,13 @@
                     function(book){
                         return (
                             <BookItem data={book} ></BookItem>
-                        );
-                    });
+                        )
+                    })
                 return (
                     <div className="bookList">
                     {bookNodes}
                     </div>
-                );
+                )
             }
         });
 
@@ -123,7 +122,7 @@
         ReactDOM.render(
         <BookList data={data} />,
             document.getElementById('App')
-        );
+        )*/
         callback();
     }
 })();

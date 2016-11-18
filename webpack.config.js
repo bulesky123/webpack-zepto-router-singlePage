@@ -25,18 +25,17 @@ module.exports = {
        ],
        resolve: {
         //配置别名，在项目中可缩减引用路径
-        alias: {
-        	root: path.join(__dirname, 'src/lib/'), //绝对路径
-        	extensions: ['', '.js', '.json', '.scss'],
-            alias: sourceMap
-        }
+           root: path.join(__dirname, 'src/lib/'), //绝对路径
+           extensions: ['', '.js', '.json', '.scss'],
+        alias: sourceMap
     },
     module:{
      noParse:['zepto','director'],
      loaders:[
+
             {test: /\.css$/, loader: 'style!css'},
             {
-                test: /\.js$/, loader: 'babel',
+                test: /\.jsx$/, loader: 'babel',
                 include: path.join(__dirname, 'src/js')
             },
             {test: /\.scss$/, loader: 'style!css!sass?sourceMap'},

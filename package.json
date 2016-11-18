@@ -33,7 +33,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node App.js",
+    "build":"webpack"
   },
   "author": "",
   "license": "ISC"
